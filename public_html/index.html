@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Arenamo Admin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/themes/redmond/theme.css" />
+        <link rel="stylesheet" href="css/arenamo.css" />
+        <link rel="stylesheet" href="css/themes/redmond/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/primeui-2.1-min.css" />
+        <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/libs/primeui-2.1-min.js"></script>
+    </head>
+    <body>
+        <div>            
+            
+            <div class="pui-grid pui-grid-responsive">                                                
+                <div class="pui-grid-row">
+                    <div class="pui-grid-col-3">
+                        <div>
+                            <div class="login-form padding20">
+                                <form method="POST">                                                                       
+                                    <span class="v-align-middle text-enlarged">Arenamo Admin</span>            
+                                    <hr class="thin"/>
+                                    <br />                                    
+                                        <input type="text" required  autocomplete="off" autofocus id = "username">                                                                            
+                                    <br /><br />
+                                    <br />
+                                    
+                                        <input type="password" required autocomplete="off" id = "password">                                   
+                                   
+                                    <br />
+                                    <br />
+                                    <button id="default" type="submit">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#default').puibutton();
+                $('#username').puiinputtext(); 
+                $('#password').puipassword();
+            });
+            $(document).ready(function () {
+                var form = $(".login-form");
+                setTimeout(function () {
+                    form.css({
+                        opacity: 1,
+                        "-webkit-transform": "scale(1)",
+                        "transform": "scale(1)",
+                        "-webkit-transition": ".5s",
+                        "transition": ".5s"
+                    });
+                }, Math.floor(Math.random() * 500));
+            });
+        </script>
+    </body>
+
+</html>
